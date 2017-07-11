@@ -9,8 +9,8 @@ Add the plugin `<plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin
 ```
 <generatorConfiguration>
     <context id="mysqlgenerator" targetRuntime="MyBatis3">
-    	<plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin>
-    	...
+        <plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin>
+        ...
     </context>
 </generatorConfiguration>
 ```
@@ -21,10 +21,10 @@ pom.xml
 
 ```
 <pluginRepositories>
-	<pluginRepository>
-		<id>mybatis-generator-limit-plugin-mvn-repo</id>
-		<url>https://raw.github.com/wucao/mybatis-generator-limit-plugin/mvn-repo/</url>
-	</pluginRepository>
+    <pluginRepository>
+        <id>xxg-repository</id>
+        <url>http://repo.maven.xxgblog.com/</url>
+    </pluginRepository>
 </pluginRepositories>
 ```
 
@@ -43,7 +43,7 @@ pom.xml
 				</dependency>
 				<dependency>
 					<groupId>com.xxg</groupId>
-					<artifactId>mybatis-generator-plugin</artifactId>
+					<artifactId>mbg-limit-plugin</artifactId>
 					<version>1.0.0</version>
 				</dependency>
 			</dependencies>
@@ -77,6 +77,3 @@ List<Xxx> list = xxxMapper.selectByExample(example);
 ```
 The SQL will be:
 `select ... limit 10`
-
-### Download
-Jar: https://github.com/wucao/mybatis-generator-limit-plugin/tree/mvn-repo/com/xxg/mybatis-generator-plugin/1.0.0
